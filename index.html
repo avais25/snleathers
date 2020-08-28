@@ -14,9 +14,6 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 <style>
 
-/* html, body {
-    height:100%;
-} */
 
 * {
   box-sizing: border-box;
@@ -51,7 +48,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   background-color: rgba(245, 245, 245, 0.8);
   text-align: center;
   vertical-align: middle;
-  line-height: 1000px;
+  line-height: 2000%;
   font-weight: bold;
   font-size: 50px;
   border-radius: 0 3px 3px 0;
@@ -59,8 +56,35 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   -webkit-user-select: none;
 }
 
+/* small screen */
+
+.prevs,
+.nexts {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  /* height: 50%; */
+  padding: 16px;
+  /* margin-top: -50px; */
+  color: black;
+  background-color: rgba(245, 245, 245, 0.8);
+
+  font-weight: bold;
+  font-size: 50px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
 /* Position the "next button" to the right */
 .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.nexts {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
@@ -68,6 +92,11 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prevs:hover,
+.nexts:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -420,8 +449,11 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   </div>
 
   <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  <a class="prev w3-hide-small" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next w3-hide-small" onclick="plusSlides(1)">&#10095;</a>
+
+  <a class="prevs w3-hide-large" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="nexts w3-hide-large" onclick="plusSlides(1)">&#10095;</a>
 
 </div>
 
@@ -1366,6 +1398,7 @@ function onClick(element) {
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
+  // w3_close();
 }
 
 
@@ -1383,6 +1416,7 @@ function openPage(pageName,elmnt) {
   }
   document.getElementById(pageName).style.display = "block";
   // elmnt.style.backgroundColor = color;
+  w3_close();
 }
 
 
