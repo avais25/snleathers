@@ -9,4 +9,4 @@ deployment:
     - /bin/cp -R ./images $DEPLOYPATH
     - /bin/cp -R ./images_mini $DEPLOYPATH
     - /bin/cp -R ./oimages $DEPLOYPATH
-    - /bin/cp ./index.html $DEPLOYPATH/index.html
+    - /bin/cp ./index.html $DEPLOYPATH
