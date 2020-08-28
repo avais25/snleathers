@@ -2,6 +2,11 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/paxdv334fokc/public_html/
-    - mkdir test
-    - touch a
-    - /bin/cp -R ./* $DEPLOYPATH
+    - rm -R $DEPLOYPATH/images
+    - rm -R $DEPLOYPATH/images_mini
+    - rm -R $DEPLOYPATH/oimages
+    - rm -R $DEPLOYPATH/index.html
+    - cp -R $DEPLOYPATH/images
+    - cp -R $DEPLOYPATH/images_mini
+    - cp -R $DEPLOYPATH/oimages
+    - cp -R $DEPLOYPATH/index.html
