@@ -14,6 +14,10 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 <style>
 
+html, body {
+    height:100%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -262,91 +266,157 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <!-- Container for the image gallery -->
 <div class="container">
 
+
+ <!-- Image text -->
+ <div class="caption-container">
+  <h2><p id="caption"></p></h2>
+</div>
+
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/G31A7532.jpg" style="width:100%" onclick="currentSlide(1)" alt="Laptop Sleeve">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/G31A7522.jpg" style="width:100%" onclick="currentSlide(2)" alt="Portfolio Bag">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/IMG_8059.jpg" style="width:100%" onclick="currentSlide(3)" alt="Trifold Wallet">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/IMG_8058.jpg" style="width:100%" onclick="currentSlide(4)" alt="Key Pouch">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/IMG_8060.jpg" style="width:100%" onclick="currentSlide(5)" alt="Passport Holder">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/IMG_8056.jpg" style="width:100%" onclick="currentSlide(6)" alt="Card Holder">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/master.jpg" style="width:100%" onclick="currentSlide(7)" alt="Capsule Wallet Pink">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/IMG_2995.jpg" style="width:100%" onclick="currentSlide(8)" alt="Capsule Wallet Brown">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/G31A7130.jpg" style="width:100%" onclick="currentSlide(9)" alt="Hand Wallet Pink 1">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/G31A7136.jpg" style="width:100%" onclick="currentSlide(10)" alt="Hand Wallet Pink 2">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/1.jpg" style="width:100%" onclick="currentSlide(11)" alt="Key Boook">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/G31A7127.jpg" style="width:100%" onclick="currentSlide(12)" alt="Clutch Pink 1">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/G31A7148.jpg" style="width:100%" onclick="currentSlide(13)" alt="Clutch Pink 2">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/G31A7159.jpg" style="width:100%" onclick="currentSlide(14)" alt="Coin Wallet Pink 1">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/G31A7154.jpg" style="width:100%" onclick="currentSlide(15)" alt="Coin Wallet Pink 2">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/G31A7142.jpg" style="width:100%" onclick="currentSlide(16)" alt="Passport Holder Pink">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./images_mini/00.jpg" style="width:100%" onclick="currentSlide(17)" alt="Portfolio Bag Green">
+    </div>
+  </div>
+</div>
+
+</div>
+
   <!-- Full-width images with number text -->
   <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
+    <div class="numbertext">1 / 17</div>
       <img src="./images/sleve/G31A7532.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
+    <div class="numbertext">2 / 17</div>
       <img src="./images/portfolio/G31A7522.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
+    <div class="numbertext">3 / 17</div>
       <img src="./images/twallet/IMG_8059.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
+    <div class="numbertext">4 / 17</div>
       <img src="./images/key/IMG_8058.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
+    <div class="numbertext">5 / 17</div>
       <img src="./images/passport/IMG_8060.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">6 / 6</div>
-      <img src="./images/capw1/master.jpg" style="width:100%">
-  </div>
-
-
-  <div class="mySlides">
-    <div class="numbertext">7 / 6</div>
+    <div class="numbertext">6 / 17</div>
       <img src="./images/card/IMG_8056.jpg" style="width:100%">
   </div>
 
 
   <div class="mySlides">
-    <div class="numbertext">8 / 6</div>
+    <div class="numbertext">7 / 17</div>
+      <img src="./images/capw1/master.jpg" style="width:100%">
+  </div>
+
+  
+
+  <div class="mySlides">
+    <div class="numbertext">8 / 17</div>
       <img src="./images/capw2/IMG_2995.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">9 / 6</div>
+    <div class="numbertext">9 / 17</div>
       <img src="./images/hw1/G31A7130.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">10 / 6</div>
+    <div class="numbertext">10 / 17</div>
       <img src="./images/hw2/G31A7136.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">11 / 6</div>
+    <div class="numbertext">11 / 17</div>
       <img src="./images/keyb/1.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">12 / 6</div>
+    <div class="numbertext">12 / 17</div>
       <img src="./images/clu1/G31A7127.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">13 / 6</div>
+    <div class="numbertext">13 / 17</div>
       <img src="./images/clu2/G31A7148.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">14 / 6</div>
+    <div class="numbertext">14 / 17</div>
       <img src="./images/coinw1/G31A7159.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">15 / 6</div>
+    <div class="numbertext">15 / 17</div>
       <img src="./images/coinw2/G31A7154.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">16 / 6</div>
+    <div class="numbertext">16 / 17</div>
       <img src="./images/passportp/G31A7142.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">17 / 6</div>
+    <div class="numbertext">17 / 17</div>
       <img src="./images/foliogr/00.jpg" style="width:100%">
   </div>
 
@@ -354,10 +424,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-  <!-- Image text -->
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
+ 
 
   <!-- Thumbnail images -->
   <!-- <div class="row">
@@ -416,66 +483,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </div> -->
 
 
-  <!-- Thumbnail images -->
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/G31A7532.jpg" style="width:100%" onclick="currentSlide(1)" alt="Laptop Sleeve">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/G31A7522.jpg" style="width:100%" onclick="currentSlide(2)" alt="Portfolio Bag">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/IMG_8059.jpg" style="width:100%" onclick="currentSlide(3)" alt="Trifold Wallet">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/IMG_8058.jpg" style="width:100%" onclick="currentSlide(4)" alt="Key Pouch">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/IMG_8060.jpg" style="width:100%" onclick="currentSlide(5)" alt="Passport Holder">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/IMG_8056.jpg" style="width:100%" onclick="currentSlide(6)" alt="Card Holder">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/master.jpg" style="width:100%" onclick="currentSlide(7)" alt="Card Holder">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/IMG_2995.jpg" style="width:100%" onclick="currentSlide(8)" alt="Card Holder">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/G31A7130.jpg" style="width:100%" onclick="currentSlide(9)" alt="Card Holder">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/G31A7136.jpg" style="width:100%" onclick="currentSlide(10)" alt="Card Holder">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/1.jpg" style="width:100%" onclick="currentSlide(11)" alt="Card Holder">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/G31A7127.jpg" style="width:100%" onclick="currentSlide(12)" alt="Card Holder">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/G31A7148.jpg" style="width:100%" onclick="currentSlide(13)" alt="Card Holder">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/G31A7159.jpg" style="width:100%" onclick="currentSlide(14)" alt="Card Holder">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/G31A7154.jpg" style="width:100%" onclick="currentSlide(15)" alt="Card Holder">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/G31A7142.jpg" style="width:100%" onclick="currentSlide(16)" alt="Card Holder">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images_mini/00.jpg" style="width:100%" onclick="currentSlide(17)" alt="Card Holder">
-    </div>
-  </div>
-</div>
-
-
-
-
-</div>
+  
 
 
 <!-- laptop sleeve -->
@@ -1389,13 +1397,14 @@ showSlides(slideIndex);
 window.onload = function start() {
   window.setInterval(function () {
       plusSlides(1);
-    }, 1000);
+    }, 2000);
 }
 
 
 
 // Next/previous controls
 function plusSlides(n) {
+  
   showSlides(slideIndex += n);
 }
 
