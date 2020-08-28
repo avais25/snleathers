@@ -1385,6 +1385,15 @@ function openPage(pageName,elmnt) {
 var slideIndex = 1;
 showSlides(slideIndex);
 
+
+window.onload = function start() {
+  window.setInterval(function () {
+      plusSlides(1);
+    }, 1000);
+}
+
+
+
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
