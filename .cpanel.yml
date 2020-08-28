@@ -6,7 +6,7 @@ deployment:
     - rm -R $DEPLOYPATH/images_mini
     - rm -R $DEPLOYPATH/oimages
     - rm $DEPLOYPATH/index.html
-    - /bin/cp -R $DEPLOYPATH/images
-    - /bin/cp -R $DEPLOYPATH/images_mini
-    - /bin/cp -R $DEPLOYPATH/oimages
-    - /bin/cp $DEPLOYPATH/index.html
+    - /bin/cp -R ./images $DEPLOYPATH/images
+    - /bin/cp -R ./images_mini $DEPLOYPATH/images_mini
+    - /bin/cp -R ./oimages $DEPLOYPATH/oimages
+    - /bin/cp ./index.html $DEPLOYPATH/index.html
