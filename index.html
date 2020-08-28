@@ -13,45 +13,6 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </style>
 
 <style>
-  /* .slides, .slides ul, .slides li { position: relative; overflow: hidden; width: 100%;  margin: 0;  }
-  .slides { margin: 0 auto;  }
-  .slides ul li { float: left; list-style: none; width: 100%;}
-  a.slide-prev, a.slide-next { 
-    position: absolute; top: 50%; z-index: 999; display: block; width: 24px; height: 24px; margin-top: -12px; cursor: pointer; opacity: 0.3;
-    color: #fff; background: #000; text-decoration: none; text-align: center; font: bold 16px/24px Impact, sans-serif; border-radius: 24px;
-    }
-    a.slide-prev:hover, a.slide-next:hover { opacity: 0.7; -webkit-transition: all 0.3s ease; }
-    a.slide-next { right: 0; } */
-
-
-
-
-
-
-    /* @keyframes slidy {
-0% { left: 0%; }
-20% { left: 0%; }
-25% { left: -100%; }
-45% { left: -100%; }
-50% { left: -200%; }
-70% { left: -200%; }
-75% { left: -300%; }
-95% { left: -300%; }
-100% { left: -400%; }
-}
-
-body { margin: 0; } 
-div#slider { overflow: hidden; }
-div#slider figure img { width: 20%; float: left; }
-div#slider figure { 
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  text-align: left;
-  font-size: 0;
-  animation: 30s slidy infinite; 
-} */
 
 * {
   box-sizing: border-box;
@@ -160,22 +121,77 @@ div#slider figure {
       <i class="fa fa-home w3-hover-opacity w3-large"></i>
       Home</b></a>
 
-      <!-- <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-        Women <i class="fa fa-caret-down"></i>
+      <a onclick="myAccFunc('dembag')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+        Folio Bags <i class="fa fa-caret-down"></i>
       </a>
-      <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-        <a href="#" class="w3-bar-item w3-button" onclick="openPage('compact',this)">Compact Wallet</a>
-        <a href="#" class="w3-bar-item w3-button">Coin Purse</a>
-        <a href="#" class="w3-bar-item w3-button">Card Holder</a>
-        <a href="#" class="w3-bar-item w3-button">Passport Holder</a>
-        <a href="#" class="w3-bar-item w3-button">Clutch Bag</a>
+      <div id="dembag" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+        <a href="#" class="w3-bar-item w3-button" onclick="openPage('compact',this)">Folio Bag Green</a>
+        <a href="#" class="w3-bar-item w3-button" onclick="openPage('portfolio',this)">Folio Bag Black</a>
+      </div>
+      <a onclick="myAccFunc('demlb')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+        Laptop Bags <i class="fa fa-caret-down"></i>
+      </a>
+      <div id="demlb" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+        <a href="#" class="w3-bar-item w3-button"  onclick="openPage('laptop',this)">Laptop Sleeve Black</a>
+      </div>
+      <a onclick="myAccFunc('demwal')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+        Wallets <i class="fa fa-caret-down"></i>
+      </a>
+      <div id="demwal" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+        <a href="#" class="w3-bar-item w3-button" onclick="openPage('compact',this)">Bifold Pink 1</a>
+        <a href="#" class="w3-bar-item w3-button" onclick="openPage('compact',this)">Bifold Pink 1</a>
+        <a href="#" class="w3-bar-item w3-button" onclick="openPage('wallet',this)">Trifold Black</a>
+        <a href="#" class="w3-bar-item w3-button">Capsule Pink 1</a>
+        <a href="#" class="w3-bar-item w3-button">Capsule Pink 2</a>
+      </div>
+      <a onclick="myAccFunc('demcul')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+        Clutches <i class="fa fa-caret-down"></i>
+      </a>
+      <div id="demcul" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+        <a href="#" class="w3-bar-item w3-button" onclick="openPage('compact',this)">Clutch Pink 1</a>
+        <a href="#" class="w3-bar-item w3-button" onclick="openPage('compact',this)">Clutch Pink 2</a>
+        <a href="#" class="w3-bar-item w3-button">Coin Holder Pink 1</a>
+        <a href="#" class="w3-bar-item w3-button">Coin Holder Pink 2</a>
+      </div>
+      <a onclick="myAccFunc('demkey')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+        Key Holder <i class="fa fa-caret-down"></i>
+      </a>
+      <div id="demkey" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+        <a href="#" class="w3-bar-item w3-button" onclick="openPage('key',this)">Key Pouch Black</a>
+        <a href="#" class="w3-bar-item w3-button">Key Book</a>
+      </div>
+      <a onclick="myAccFunc('demph')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+        Passport Holder <i class="fa fa-caret-down"></i>
+      </a>
+      <div id="demph" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+        <a href="#" class="w3-bar-item w3-button" onclick="openPage('passport',this)">Passport Holder Black</a>
+        <a href="#" class="w3-bar-item w3-button">Passport Holder Pink</a>
+      </div>
+<!-- 
+      <a onclick="myAccFunc('demkr')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+        Key Ring <i class="fa fa-caret-down"></i>
+      </a>
+      <div id="demkr" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+        <a href="#" class="w3-bar-item w3-button" onclick="openPage('compact',this)">1</a>
+        <a href="#" class="w3-bar-item w3-button">2</a>
       </div> -->
-    <a href="#" class="w3-bar-item w3-button" onclick="openPage('laptop',this)">Laptop Sleeve</a>
-    <a href="#" class="w3-bar-item w3-button tablink" onclick="openPage('wallet',this)">Trifold Wallet</a>
-    <a href="#" class="w3-bar-item w3-button tablink" onclick="openPage('portfolio',this)">Portfolio Bag</a>
-    <a href="#" class="w3-bar-item w3-button" onclick="openPage('passport',this)">Passport Holder</a>
-    <a href="#" class="w3-bar-item w3-button" onclick="openPage('card',this)">Card Holder</a>
-    <a href="#" class="w3-bar-item w3-button" onclick="openPage('key',this)">Key Pouch</a>
+
+      <a onclick="myAccFunc('demch')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+        Card Holder <i class="fa fa-caret-down"></i>
+      </a>
+      <div id="demch" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+        <a href="#" class="w3-bar-item w3-button" onclick="openPage('card',this)">Card Holder Black</a>
+        <!-- <a href="#" class="w3-bar-item w3-button">2</a> -->
+      </div>
+
+      
+ 
+    <!-- <a href="#" class="w3-bar-item w3-button" onclick="openPage('laptop',this)">Laptop Sleeve</a> -->
+    <!-- <a href="#" class="w3-bar-item w3-button tablink" onclick="openPage('wallet',this)">Trifold Wallet</a> -->
+    <!-- <a href="#" class="w3-bar-item w3-button tablink" onclick="openPage('portfolio',this)">Portfolio Bag</a> -->
+    <!-- <a href="#" class="w3-bar-item w3-button" onclick="openPage('passport',this)">Passport Holder</a> -->
+    <!-- <a href="#" class="w3-bar-item w3-button" onclick="openPage('card',this)">Card Holder</a> -->
+    <!-- <a href="#" class="w3-bar-item w3-button" onclick="openPage('key',this)">Key Pouch</a> -->
     
 
     <!-- <a href="#" class="w3-bar-item w3-button">Blazers</a> -->
@@ -303,29 +319,6 @@ div#slider figure {
     </div>
   </div>
 </div>
-
-<!-- <div class="slides">
-	<ul>
-		<li><img src="./images/sleve/G31A7532.jpg" alt style="width:70%"></li>
-		<li><img src="./images/portfolio/G31A7522.jpg" alt style="width:70%" ></li>
-		<li><img src="./images/twallet/IMG_8065.jpg" alt  style="width:70%"></li>
-	</ul>
-	<a href="#" class="slide-next">&gt;</a> 
-	<a href="#" class="slide-prev">&lt;</a>
-</div> -->
-
-
-<!-- <div id="slider">
-<figure>
-<img src="./images/sleve/G31A7532.jpg" alt>
-<img src="./images/portfolio/G31A7522.jpg" alt>
-<img src="./images/twallet/IMG_8065.jpg" alt>
-<img src="./images/sleve/G31A7532.jpg" alt>
-<img src="./images/sleve/G31A7532.jpg" alt>
-<a href="#" class="slide-next">&gt;</a> 
-<a href="#" class="slide-prev">&lt;</a>
-</figure>
-</div> -->
 
 
 
@@ -678,8 +671,8 @@ div#slider figure {
 
 <script>
 // Accordion 
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
+function myAccFunc(e1) {
+  var x = document.getElementById(e1);
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
   } else {
@@ -733,48 +726,6 @@ function openPage(pageName,elmnt) {
 
 </script>
 
-
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script>
-jQuery(document).ready(function($) {
-	var interval;
-	
-	$('.slides').hover(function() {
-		if (interval) clearInterval(interval);
-		clearInterval(interval);
-		interval = null;
-	}, function() {
-		interval = setInterval(function() { slideRight(); }, 2000);	
-	});
-	var slideCount  = $('.slides ul li').length;
-	var slideWidth  = $('.slides ul li').width();
-	var slideHeight = $('.slides ul li').height();
-	var sliderWidth = slideCount * slideWidth;
-	
-	$('.slides').css({ width: slideWidth, height: slideHeight });
-	$('.slides ul').css({ width: sliderWidth, marginLeft: - slideWidth });
-	$('.slides ul li:last-child').prependTo('.slides ul');
-	
-	function slideLeft() {
-		$('.slides ul').animate({ left: + slideWidth }, 200, function() {
-			$('.slides ul li:last-child').prependTo('.slides ul');
-			$('.slides ul').css('left', '');
-		});
-	};
-	function slideRight() {
-		$('.slides ul').animate({ left: - slideWidth }, 200, function() {
-			$('.slides ul li:first-child').appendTo('.slides ul');
-			$('.slides ul').css('left', '');
-		});
-	};
-	$('a.slide-prev').click(function(e) {
-		e.preventDefault(); slideLeft();
-	});
-	$('a.slide-next').click(function(e) {
-		e.preventDefault(); slideRight();
-	});
-});
-</script> -->
 
 <script>
 
