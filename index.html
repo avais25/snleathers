@@ -158,14 +158,14 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       </a>
       <div id="demkey" class="w3-bar-block w3-hide w3-padding-large w3-medium">
         <a href="#" class="w3-bar-item w3-button" onclick="openPage('key',this)">Key Pouch Black</a>
-        <a href="#" class="w3-bar-item w3-button">Key Book</a>
+        <a href="#" class="w3-bar-item w3-button" onclick="openPage('keyb',this)">Key Book</a>
       </div>
       <a onclick="myAccFunc('demph')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
         Passport Holder <i class="fa fa-caret-down"></i>
       </a>
       <div id="demph" class="w3-bar-block w3-hide w3-padding-large w3-medium">
         <a href="#" class="w3-bar-item w3-button" onclick="openPage('passport',this)">Passport Holder Black</a>
-        <a href="#" class="w3-bar-item w3-button">Passport Holder Pink</a>
+        <a href="#" class="w3-bar-item w3-button" onclick="openPage('passportp',this)">Passport Holder Pink</a>
       </div>
 <!-- 
       <a onclick="myAccFunc('demkr')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
@@ -533,6 +533,70 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
  </div>
 
 
+ <!-- Key Book Tab -->
+ <div class="tabcontent" id="keyb">
+
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container" style="padding:128px 64px">
+    <img src="./images/keyb/1.jpg" style="width:70%" onclick="onClick(this)">
+    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+    </div>
+  </div>
+
+  <div class="w3-container w3-text-grey" id="jeans">
+    <p>More Images</p>
+  </div>
+
+
+  
+  <!-- Product grid -->
+  <div class="w3-row w3-grayscale">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="./images/keyb/2.jpg" style="width:100%" onclick="onClick(this)">
+      </div>
+      <div class="w3-container">
+        <img src="./images/keyb/3.jpg" style="width:100%" onclick="onClick(this)">      </div>
+
+      <div class="w3-container">
+        <img src="./images/keyb/4.jpg" style="width:100%" onclick="onClick(this)">
+      </div>
+    </div>
+
+
+
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="./images/keyb/5.jpg" style="width:100%" onclick="onClick(this)">
+      </div>
+      <div class="w3-container">
+        <img src="./images/keyb/6.jpg" style="width:100%" onclick="onClick(this)">      </div>
+
+      <div class="w3-container">
+        <img src="./images/keyb/7.jpg" style="width:100%" onclick="onClick(this)">
+      </div>
+    </div>
+
+
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="./images/keyb/8.jpg" style="width:100%" onclick="onClick(this)">
+      </div>
+      <div class="w3-container">
+        <img src="./images/keyb/9.jpg" style="width:100%" onclick="onClick(this)">      </div>
+
+      <div class="w3-container">
+        <img src="./images/keyb/10.jpg" style="width:100%" onclick="onClick(this)">
+      </div>
+    </div>
+  </div>
+ 
+ </div>
+
+
  <!-- Passport Tab -->
 <div class="tabcontent" id="passport">
 
@@ -564,6 +628,33 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <img src="./images/passport/IMG_8061.jpg"" style="width:100%" onclick="onClick(this)">
   </div>
 </div>
+
+
+
+ </div>
+ </div>
+
+  <!-- Passport pink Tab -->
+<div class="tabcontent" id="passportp">
+
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container" style="padding:128px 64px">
+   <img src="./images/passportp/G31A7142.jpg" style="width:70%" onclick="onClick(this)">
+   <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+   </div>
+ </div>
+ 
+ <div class="w3-container w3-text-grey">
+   <p>More Images</p>
+ </div>
+ 
+ <div class="w3-row w3-grayscale">
+ <div class="w3-col l3 s6">
+   <div class="w3-container">
+     <img src="./images/passportp/G31A7141.jpg" style="width:100%" onclick="onClick(this)">
+   </div>
+ </div>
 
 
 
@@ -700,7 +791,8 @@ function onClick(element) {
   var str = element.src;
   var spl = str.split("images");
   var spl2 = spl[1].split(".");
-  document.getElementById("img01").src = spl[0] + "oimages" + spl2[0] + ".JPG";
+  document.getElementById("img01").src = spl[0] + "oimages" + spl[1];
+  // + spl2[0] + ".JPG";
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
