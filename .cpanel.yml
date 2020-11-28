@@ -2,11 +2,13 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/paxdv334fokc/public_html/
-#     - rm -R -f $DEPLOYPATH/images
-#     - rm -R -f $DEPLOYPATH/images_mini
-#     - rm -R -f $DEPLOYPATH/oimages
+    - rm -R -f $DEPLOYPATH/images
+    - rm -R -f $DEPLOYPATH/images_mini
+    - rm -R -f $DEPLOYPATH/oimages
+    - rm -R -f $DEPLOYPATH/html
     - rm -f $DEPLOYPATH/index.html
-#     - /bin/cp -R -f ./images $DEPLOYPATH
-#     - /bin/cp -R -f ./images_mini $DEPLOYPATH
-#     - /bin/cp -R -f ./oimages $DEPLOYPATH
+    - /bin/cp -R -f ./images $DEPLOYPATH
+    - /bin/cp -R -f ./images_mini $DEPLOYPATH
+    - /bin/cp -R -f ./oimages $DEPLOYPATH
+    - /bin/cp -R -f ./html $DEPLOYPATH
     - /bin/cp -f index.html $DEPLOYPATH
