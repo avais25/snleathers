@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<title>S.N.Leathers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+
+<style>
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 25%;
+  width: auto;
+  height: 50%;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  background-color: rgba(245, 245, 245, 0.8);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 2000%;
+  font-weight: bold;
+  font-size: 50px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* small screen */
+
+.prevs,
+.nexts {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  /* height: 50%; */
+  padding: 16px;
+  /* margin-top: -50px; */
+  color: black;
+  background-color: rgba(245, 245, 245, 0.8);
+
+  font-weight: bold;
+  font-size: 50px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.nexts {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prevs:hover,
+.nexts:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 5.8%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+
+  </style>
+
+<body  >
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+    <div class="w3-container w3-display-container w3-padding-16">
+      <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+      <!-- <h3 class="w3-wide"><b>SNL</b></h3> -->
+      <img src="../images/logo.jpeg" style="width:100%" >
+    </div>
+    <div class="w3-padding-64 w3-large " style="font-weight:bold">
+  
+      <a href="../index.html" class="w3-bar-item w3-button" ><b>
+        <i class="fa fa-home w3-hover-opacity w3-large"></i>
+        Home</b></a>
+  
+        <a onclick="myAccFunc('dembag')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+          Portfolio Bags <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="dembag" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="./folio_bag_green.html" class="w3-bar-item w3-button">Folio Bag Green</a>
+          <a href="./folio_bag_black.html" class="w3-bar-item w3-button">Folio Bag Black</a>
+        </div>
+        <a onclick="myAccFunc('demlb')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+          Laptop Bags <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="demlb" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="./laptop_sleeve_black.html" class="w3-bar-item w3-button" >Laptop Sleeve Black</a>
+        </div>
+        <a onclick="myAccFunc('demwal')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+          Wallets <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="demwal" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="./hand_wallet_red.html" class="w3-bar-item w3-button">Hand Wallet Red</a>
+          <a href="./hand_wallet_pink.html" class="w3-bar-item w3-button">Hand Wallet Pink</a>
+          <a href="./trifold_black.html" class="w3-bar-item w3-button" >Trifold Black</a>
+          <a href="./capsule_red.html" class="w3-bar-item w3-button">Capsule Red</a>
+          <a href="./capsule_brown.html" class="w3-bar-item w3-button">Capsule Brown</a>
+          <a href="./coin_holder_red.html" class="w3-bar-item w3-button">Coin Holder Red</a>
+          <a href="./coin_holder_pink.html" class="w3-bar-item w3-button">Coin Holder Pink</a>
+        </div>
+        <a onclick="myAccFunc('demcul')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+          Clutches <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="demcul" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="./clutch_red.html" class="w3-bar-item w3-button">Clutch Red</a>
+          <a href="./clutch_pink.html" class="w3-bar-item w3-button">Clutch Pink</a>
+  
+        </div>
+        <a onclick="myAccFunc('demkey')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+          Key Holder <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="demkey" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="./key_pouch_black.html" class="w3-bar-item w3-button">Key Pouch Black</a>
+          <a href="./key_book_green.html" class="w3-bar-item w3-button">Key Book Green</a>
+        </div>
+        <a onclick="myAccFunc('demph')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+          Passport Holder <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="demph" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="./pasport_holder_black.html" class="w3-bar-item w3-button">Passport Holder Black</a>
+          <a href="./passport_holder_pink.html" class="w3-bar-item w3-button">Passport Holder Pink</a>
+        </div>
+  <!-- 
+        <a onclick="myAccFunc('demkr')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+          Key Ring <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="demkr" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="#" class="w3-bar-item w3-button" onclick="openPage('compact',this)">1</a>
+          <a href="#" class="w3-bar-item w3-button">2</a>
+        </div> -->
+  
+        <a onclick="myAccFunc('demch')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+          Card Holder <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="demch" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="./card_holder_black.html" class="w3-bar-item w3-button">Card Holder Black</a>
+  
+  
+        </div>
+  
+        
+  
+  
+    </div>
+    <a href="#footer" class="w3-bar-item w3-button w3-padding">
+      <i class="fa fa-address-book w3-hover-opacity w3-large"></i>
+      Contact</a> 
+    <!-- <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a>  -->
+    <!-- <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a> -->
+  </nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide"> S.N.Leathers
+    
+  </div>
+
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+
+
+
+
+<!-- Portfolio Tab -->
+<div class="tabcontent" id="portfolio">
+
+
+    <!-- Image header -->
+    <div class="w3-display-container w3-container" style="padding:128px 64px">
+      <img src="../images/portfolio/G31A7522.jpg" style="width:100%" onclick="onClick(this)">
+      <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+      </div>
+    </div>
+  
+    <div class="w3-container w3-text-grey" id="jeans">
+      <p>More Images</p>
+    </div>
+  
+  
+    
+    <!-- Product grid -->
+    <div class="w3-row ">
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <img src="../images/portfolio/G31A7522.jpg" style="width:100%" onclick="onClick(this)">
+          <!-- <p>Ripped Skinny Jeans<br><b>$24.99</b></p> -->
+        </div>
+        <div class="w3-container">
+          <img src="../images/portfolio/G31A7523.jpg" style="width:100%" onclick="onClick(this)">
+          <!-- <p>Mega Ripped Jeans<br><b>$19.99</b></p> -->
+        </div>
+  
+        <div class="w3-container">
+          <img src="../images/portfolio/G31A7523 copy.jpg" style="width:100%" onclick="onClick(this)">
+          <!-- <p>Washed Skinny Jeans<br><b>$20.50</b></p> -->
+        </div>
+      </div>
+  
+  
+  
+  
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <img src="../images/portfolio/G31A7525.jpg" style="width:100%" onclick="onClick(this)">
+          <!-- <p>Ripped Skinny Jeans<br><b>$24.99</b></p> -->
+        </div>
+        <div class="w3-container">
+          <img src="../images/portfolio/G31A7527.jpg" style="width:100%" onclick="onClick(this)">
+          <!-- <p>Mega Ripped Jeans<br><b>$19.99</b></p> -->
+        </div>
+  
+        <div class="w3-container">
+          <img src="../images/portfolio/G31A7528.jpg" style="width:100%" onclick="onClick(this)">
+          <!-- <p>Washed Skinny Jeans<br><b>$20.50</b></p> -->
+        </div>
+      </div>
+  
+  
+  
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <img src="../images/portfolio/G31A7529.jpg" style="width:100%" onclick="onClick(this)">
+          <!-- <p>Ripped Skinny Jeans<br><b>$24.99</b></p> -->
+        </div>
+        <div class="w3-container">
+          <img src="../images/portfolio/G31A7531.jpg" style="width:100%" onclick="onClick(this)">
+          <!-- <p>Mega Ripped Jeans<br><b>$19.99</b></p> -->
+        </div>
+  
+        <div class="w3-container">
+          <img src="../images/portfolio/G31A7545.jpg" style="width:100%" onclick="onClick(this)">
+          <!-- <p>Washed Skinny Jeans<br><b>$20.50</b></p> -->
+        </div>
+      </div>
+    </div>
+   
+   </div>
+  
+  
+ </div>
+  
+  <!-- Footer -->
+  <footer class="w3-padding-32 w3-light-grey w3-large w3-center" id="footer">
+    <div class="w3-row-padding">
+
+
+      <div >
+        <h1>Contact</h1>
+        <p><i class="fa fa-fw fa-map-marker"></i> S.N.Leathers, Saklat Plaza Market <br> 
+        Shop No. 2, 2 Saklat Palace, Chandni Chowk, 700072, Kolkata,India</p>
+        <p><i class="fa fa-fw fa-phone"></i> +91 83690 35529</p>
+        <p><i class="fa fa-fw fa-envelope"></i> s.n.leathers.india@gmail.com</p>
+        <!-- <h4>We accept</h4>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p> -->
+        <br>
+        <a href="https://www.facebook.com/S-N-Leathers-112814937126226/"><i class="fa fa-facebook-official w3-hover-opacity w3-large"></i></a>
+        <a href="https://instagram.com/s.n.leathers/"><i class="fa fa-instagram w3-hover-opacity w3-large"></i></a>
+        <a href="https://github.com/avais25/snleathers"><i class="fa fa-github w3-hover-opacity w3-large"></i></a>
+        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+        <!-- <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i> -->
+        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center ">© S.N.Leathers </div>
+
+  <!-- End page content -->
+</div>
+
+
+
+
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">NEWSLETTER</h2>
+      <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+  <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption"></p>
+  </div>
+</div>
+
+<script>
+// Accordion 
+function myAccFunc(e1) {
+  var x = document.getElementById(e1);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+//opening default page
+document.getElementById("defaultOpen").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  var str = element.src;
+  var spl = str.split("images");
+  var spl2 = spl[1].split(".");
+  document.getElementById("img01").src = spl[0] + "oimages" + spl[1];
+  // + spl2[0] + ".JPG";
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+  // w3_close();
+}
+
+
+
+//open product page
+function openPage(pageName,elmnt) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  // elmnt.style.backgroundColor = color;
+  w3_close();
+}
+
+
+</script>
+
+
+<script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+
+window.onload = function start() {
+  window.setInterval(function () {
+      plusSlides(1);
+    }, 2000);
+}
+
+
+
+// Next/previous controls
+function plusSlides(n) {
+  
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+  
+</script>
+
+
+</body>
+</html>
